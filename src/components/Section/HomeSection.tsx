@@ -1,9 +1,8 @@
 import Typewriter from 'typewriter-effect'
-import { easeIn, motion, Variant, Variants } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { CardBooking } from '../CardBooking'
-import image from '@/assets/barber2.png'
 import { useEffect, useState } from 'react';
-import { useAnimation } from 'framer-motion';
+
 export function HomeSection() {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     useEffect(() => {
