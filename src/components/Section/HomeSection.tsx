@@ -64,9 +64,14 @@ export function HomeSection() {
 
                 <div className='flex-auto md:flex-1 '>
                     <div className='ml-auto max-w-xl  '>
-                        <p className='text-2xl'> We specialize in delivering sharp haircuts, stylish grooming, and a full suite of barbering services to keep you looking your best.</p>
-                    </div>
+                        <p className="sm:text-4xl text-2xl text-right font-light open-sans">
+                            We specialize in delivering sharp haircuts, stylish grooming, and a full suite of barbering services to keep you <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">looking your best.</span>
+                        </p>
 
+                    </div>
+                    {/* <div className='mt-12  h-[200px]' >
+                        <ThreeScene />
+                    </div> */}
                 </div>
             </div>
         </motion.div>

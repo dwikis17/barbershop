@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 
@@ -36,8 +36,22 @@ const services = [
 ];
 
 const OurServiceSection = () => {
+
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     const ref = useRef(null)
-    const isInView = useInView(ref)
+    const isInView = useInView(ref, { amount: screenWidth >= 768 ? 0.6 : 0.2 })
 
     return (
 
@@ -55,8 +69,8 @@ const OurServiceSection = () => {
                         transition={{ duration: 0.3 }}
                     >
                         <div className="text-6xl mb-4">{service.icon}</div>
-                        <h2 className="text-2xl font-semibold mb-2">{service.name}</h2>
-                        <p className="text-gray-600">{service.description}</p>
+                        <h2 className="text-2xl font-semibold mb-2 text-black">{service.name}</h2>
+                        <p className="text-gray-600 font-sans">{service.description}</p>
                     </motion.div>
                 ))}
             </div>
