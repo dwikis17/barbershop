@@ -1,0 +1,29 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+    /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(100% * 5);
+    /* 5 divs */
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    /* Each item takes up full width */
+    height: 200px;
+    /* Adjust height as needed */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
