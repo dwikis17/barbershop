@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import barber1 from "../assets/barber1.png";
+
 import barber2 from "../assets/barber2.png";
-import barber3 from "../assets/barber3.png";
-import barber4 from "../assets/barber4.png";
-import barber5 from "../assets/barber4.png";
+
 const ImageSlider = () => {
     const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
 
